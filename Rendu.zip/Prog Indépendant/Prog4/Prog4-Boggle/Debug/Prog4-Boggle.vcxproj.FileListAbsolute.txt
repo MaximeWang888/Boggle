@@ -1,2 +1,0 @@
-C:\Users\china\source\repos\Prog4-Boggle\Debug\Prog4-Boggle.exe
-C:\Users\china\source\repos\Prog4-Boggle\Debug\Prog4-Boggle.pdb

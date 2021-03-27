@@ -1,7 +1,0 @@
-﻿  Main.cpp
-C:\Users\china\source\repos\Prog5-Boggle\Main.cpp(22,19): warning C4018: '<' : incompatibilité signed/unsigned
-  autresFonctions.cpp
-C:\Users\china\source\repos\Prog5-Boggle\autresFonctions.cpp(217,32): warning C4018: '<' : incompatibilité signed/unsigned
-C:\Users\china\source\repos\Prog5-Boggle\autresFonctions.cpp(219,51): warning C4018: '<' : incompatibilité signed/unsigned
-  Génération de code en cours...
-  Prog5-Boggle.vcxproj -> C:\Users\china\source\repos\Prog5-Boggle\Debug\Prog5-Boggle.exe
