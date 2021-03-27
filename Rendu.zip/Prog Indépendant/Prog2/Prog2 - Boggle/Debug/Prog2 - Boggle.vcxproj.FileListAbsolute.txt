@@ -1,0 +1,2 @@
+C:\Users\china\source\repos\Prog2 - Boggle\Debug\Prog2 - Boggle.exe
+C:\Users\china\source\repos\Prog2 - Boggle\Debug\Prog2 - Boggle.pdb

@@ -1,0 +1,72 @@
+#pragma warning(disable:4996)
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <cstdio>
+#include <cstring>
+#include <cassert>
+using namespace std;
+
+typedef char Mot[30 + 1];
+
+struct Mots {
+	unsigned int counter = 0;
+	Mot listOfWord[500];
+};
+
+void wordFound(Mots* pt_mot)
+{
+	int* newlisteMot,newCompteur = pt_mot->counter;
+	newlisteMot = new int[pt_mot->counter];
+	bool isAlreadyInput = true;
+
+	while (isAlreadyInput) {
+		if (newCompteur != 0 && strcmp(pt_mot->listOfWord[newCompteur - 1], "*") == 0) {
+			break;
+		}
+		else if (strcmp(pt_mot->listOfWord[newCompteur], "*") == 0)
+		{
+			break; 
+		}
+		cin >> pt_mot->listOfWord[newCompteur];
+		newCompteur++;
+	}
+	pt_mot->counter = newCompteur;
+}
+
+void showScore(Mots* pt_mot)
+{
+	int compteur = 0, nbPoints = 0;
+	string* list_ods;
+	list_ods = new string[369085];
+	ifstream file("ods4.txt");
+
+	string line;
+	while (getline(file, line)) {
+		list_ods[compteur] = line;
+		compteur++;
+	}
+
+	for (int i = 0; i < pt_mot->counter; i++){
+		for (int ii = 0; ii < compteur; ii++) {
+			unsigned int lenghtofString = strlen(pt_mot->listOfWord[i]);
+			if (lenghtofString >= 8) { nbPoints = nbPoints + 11; }
+			if (lenghtofString == 7) { nbPoints = nbPoints + 5; }
+			if (lenghtofString == 6) { nbPoints = nbPoints + 3; }
+			if (lenghtofString == 5) { nbPoints = nbPoints + 2; }
+			if (lenghtofString == 3 || lenghtofString == 4) { nbPoints = nbPoints + 1; }
+			break;
+		}
+	}
+	cout << nbPoints;
+}
+
+int main() {
+
+	Mots saveWord = {};
+
+	wordFound(&saveWord);
+	showScore(&saveWord);
+
+	return 0;
+}

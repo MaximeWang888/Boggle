@@ -1,0 +1,2 @@
+C:\Users\china\source\repos\Prog3-Boggle\Debug\Prog3-Boggle.exe
+C:\Users\china\source\repos\Prog3-Boggle\Debug\Prog3-Boggle.pdb
